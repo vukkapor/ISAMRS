@@ -9,9 +9,10 @@ class FlightsController extends Controller
 {
     public function index()
     {
-    	//$flights = Flight::all();
-
-    	return view('flights.index');
+    	$flights = Flight::all();
+    	return view('flights.index', [
+    		'flights' => $flights
+    	]);
     }
 
     public function create()
@@ -31,8 +32,8 @@ class FlightsController extends Controller
 			'flight_price' => 'required|min:1',
 		]);
 
-		// Flight::create($attributes);
+		Flight::create($attributes);
 
-		return redirect('/projects');
+		return redirect('/flights');
 	}    
 }
