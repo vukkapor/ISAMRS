@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('flights', 'FlightsController');
+Route::get('/user/profile', 'UserController@index');
