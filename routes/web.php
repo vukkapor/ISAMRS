@@ -21,3 +21,8 @@ Route::get('/user/profile', 'UserController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/dashboard', 'AdminController@index');
+Route::get('/hotel/dashboard', 'HotelAdminController@index');
+Route::get('/rentacar/dashboard', 'RentacarAdminController@index');
+Route::get('/avio/dashboard', 'AvioAdminController@index');
