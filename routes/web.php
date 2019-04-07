@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::resource('flights', 'FlightsController');
 Route::get('/user/profile', 'UserController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
