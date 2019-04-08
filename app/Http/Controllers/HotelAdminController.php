@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class HotelAdminController extends Controller
 {
-    public void __construct()
+    public function __construct()
     {
     	$this->middleware('auth');
-    	$this->middleware('role:ROLE_HOTEL')
+    	$this->middleware('role:ROLE_HOTEL');
     }
 
     public function index()
