@@ -11,16 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('flights', 'FlightsController');
 Route::get('/user/profile', 'UserController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/dashboard', 'AdminController@index');
 Route::get('/hotel/dashboard', 'HotelAdminController@index');
