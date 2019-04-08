@@ -8,16 +8,24 @@ use \App\Flight;
 
 class FlightsController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth')->except('index');
+	}
+
     public function index()
     {
+    	//$this->authorize('index', Flight::class);
     	$flights = Flight::all();
     	return view('flights.index', [
-    		'flights' => $flights
+    		'flights' => $flights,
     	]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
+    	$request->user()->authorizeRoles(['ROLE_AVIO', 'ROLE_ADMIN']);
+
     	return view('flights.create');
     }
 

@@ -9,7 +9,7 @@ class AvioAdminController extends Controller
     public function __construct()
     {
     	$this->middleware('auth');
-    	$this->middleware('role:ROLE_AVIO')
+    	$this->middleware('role:ROLE_AVIO');
     }
 
     public function index()
