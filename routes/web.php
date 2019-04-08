@@ -14,9 +14,9 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('flights', 'FlightsController');
-Route::get('/user/profile', 'UserController@index');
+Route::get('/user/profile', 'UserController@index')->middleware('verified');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 Route::get('/admin/dashboard', 'AdminController@index');
