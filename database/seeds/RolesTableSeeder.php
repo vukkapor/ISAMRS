@@ -30,5 +30,10 @@ class RolesTableSeeder extends Seeder
             'name' => 'ROLE_AVIO',
             'description' => 'This is the administrator of the Avio Company',
         ]);
+
+        DB::table('roles')->insert([
+            'name' => 'ROLE_GUEST',
+            'description' => 'This is the guest user',
+        ]);
     }
 }
