@@ -39,7 +39,7 @@ class LoginController extends Controller
         {
             return redirect('/hotel/dashboard');   
         }
-        else 
+        elseif($user->hasRole('ROLE_AVIO')) 
         {
             return redirect('/aviocompany/dashboard');
         }
