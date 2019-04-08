@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 	<style type="text/css">
@@ -10,6 +10,7 @@
 			font-weight: 600;
 		}
 	</style>
+	<div class="container">
 	<h1> All Flights </h1>
 		@foreach($flights as $flight)
 			<div class="card mb-3">
@@ -52,4 +53,5 @@
   		</div>
 	</div>
 		@endforeach
+	</div>
 @endsection
