@@ -49,6 +49,17 @@
                 <a class="navbar-item">
                     Rent-a-Car
                 </a>
+                <form action="/search" method="POST" role="search" style="display: flex;">
+                    @csrf
+                    <div class="field" style="padding-top: 9px;">
+                        <input class="input" type="text" name="query" placeholder="Search..."> 
+                    </div>
+                    <div class="field">
+                        <button type="submit" class="button is-primary" style="margin-top: 9px;">
+                            Search
+                        </button>
+                    </div>
+                </form>
 </div>
 
         <div class="navbar-end">
