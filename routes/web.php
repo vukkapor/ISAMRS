@@ -23,3 +23,5 @@ Route::get('/admin/dashboard', 'AdminController@index');
 Route::get('/hotel/dashboard', 'HotelAdminController@index');
 Route::get('/rentacar/dashboard', 'RentacarAdminController@index');
 Route::get('/avio/dashboard', 'AvioAdminController@index');
+
+Route::any('/search', 'SearchController@search');
