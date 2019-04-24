@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
 	<div class="container">
+		<progress class="progress is-primary" value="30" max="100">30%</progress>
 		<h1> All Flights </h1>
 		@foreach($flights as $flight)
 			<div class="card">
