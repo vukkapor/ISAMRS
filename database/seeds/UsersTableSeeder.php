@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Dejan',
             'email' => 'dejangacevic24@gmail.com',
             'password' => 'nightbuzz123',
+            'e_mail_verified_at' => now(),
         ]);
     }
 }
