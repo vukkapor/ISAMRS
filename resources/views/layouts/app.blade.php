@@ -49,15 +49,27 @@
                 <a class="navbar-item">
                     Rent-a-Car
                 </a>
-                <form action="/search" method="POST" role="search" style="display: flex;">
+                <form action="/search" method="POST" style="display: flex; margin-left: 180px">
                     @csrf
-                    <div class="field" style="padding-top: 9px;">
-                        <input class="input" type="text" name="query" placeholder="Search..."> 
-                    </div>
-                    <div class="field">
-                        <button type="submit" class="button is-primary" style="margin-top: 9px;">
-                            Search
-                        </button>
+                    <div class="field has-addons has-addons-centered" style="padding-top: 9px;">
+                        <p class="control">
+                            <span class="select">
+                                <select name="category">
+                                    <option value="all">All</option>
+                                    <option value="flights">Flights</option>
+                                    <option value="bnbs">BnB's</option>
+                                    <option value="rentacar">Rent-a-Car</option>
+                                </select>
+                            </span>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="text" placeholder="Search..." name="query">
+                        </p>
+                        <p class="control">
+                            <button type="sumbit" class="button is-primary">
+                                Search
+                            </a>
+                        </p>
                     </div>
                 </form>
 </div>
